@@ -1,4 +1,5 @@
-# Readme
+# Readme 
+[![Build Status](https://www.travis-ci.org/lalawow/exercise3.svg?branch=master)](https://www.travis-ci.org/lalawow/exercise3)
 
 ### 步骤
 
