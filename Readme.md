@@ -2,6 +2,9 @@
 
 ### 步骤
 
+[![Build Status](https://travis-ci.org/Airsola/exercise3.svg?branch=master)](https://travis-ci.org/Airsola/exercise3)
+
+
 * 全局安装 karma
 
 ```
