@@ -8,9 +8,6 @@ before_script:
   - sleep 3 # give xvfb some time to start
 
 before_install:
-  - npm install -g mocha
-
-install:
   - npm install
 
 after_success:
