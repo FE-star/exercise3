@@ -32,5 +32,16 @@ describe('jQuery', function () {
 
   it('should able to request https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js', function (done) {
     // 使用 jQuery.ajax 请求 https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js，并验证是否拿到文件
+    //   $.get('https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js')
+    //       .success(function (data) {
+    //           console.log(data)
+    //           done()
+    //       })
+    $.ajax('https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js', function () {
+        corssDomain: true //跨域请求 需要标识出来
+    }).success(function () {
+        done()
+    })
+
   })
 })
