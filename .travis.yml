@@ -2,4 +2,4 @@ language: node_js
 node_js:
   - "6"
 before_install:
-  - npm install -g mocha
+  - npm install -g karma-cli
