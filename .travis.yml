@@ -3,6 +3,7 @@ node_js:
   - "6"
 before_install:
   - npm install -g mocha
+  - npm install karma-coverage --save-dev
   - npm install -g istanbul
   - npm install -g karma-cli
 
