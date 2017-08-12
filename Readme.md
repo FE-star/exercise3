@@ -2,6 +2,11 @@
 
 ### 步骤
 
+[![Build Status](https://travis-ci.org/Airsola/exercise3.svg?branch=master)](https://travis-ci.org/Airsola/exercise3)
+
+[![Coverage Status](https://coveralls.io/repos/github/Airsola/exercise3/badge.svg?branch=master)](https://coveralls.io/github/Airsola/exercise3?branch=master)
+
+
 * 全局安装 karma
 
 ```
