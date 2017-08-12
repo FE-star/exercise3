@@ -25,17 +25,26 @@ module.exports = function(config) {
     exclude: [
     ],
 
+    reporters: ['progress','coverage'],
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      'test/*.js': ['coverage']
     },
 
+    coverageReporter: {
+    // cf. http://gotwarlost.github.com/istanbul/public/apidocs/
+      type : 'lcovonly',
+      // file: 'report-lcovonly.txt',
+      dir : 'coverage/'
+    },
 
+    // type : 'html', dir : 'coverage/'
+   
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
 
 
     // web server port
