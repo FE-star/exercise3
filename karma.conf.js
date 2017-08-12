@@ -25,7 +25,6 @@ module.exports = function(config) {
     exclude: [
     ],
 
-    reporters: ['progress','coverage'],
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
@@ -33,11 +32,15 @@ module.exports = function(config) {
       'test/*.js': ['coverage']
     },
 
+    // progress
+    // mocha
+    reporters: ['mocha','coverage'],
+
     coverageReporter: {
-    // cf. http://gotwarlost.github.com/istanbul/public/apidocs/
-      type : 'lcovonly',
-      // file: 'report-lcovonly.txt',
-      dir : 'coverage/'
+       reporters:[
+        {type: 'lcov', dir: 'coverage/'},
+        {type: 'text-summary'}
+      ]
     },
 
     // type : 'html', dir : 'coverage/'
@@ -71,7 +74,7 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: true,
+    singleRun: process.env.TRAVIS,
 
     // Concurrency level
     // how many browser should be started simultaneous
