@@ -15,7 +15,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'test/jquery.js',
+      'http://cdn.bootcss.com/jquery/2.0.2/jquery.min.js',
       'node_modules/should/should.js',
       'test/test.js'
     ],
