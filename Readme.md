@@ -1,4 +1,5 @@
 # Readme
+![Build Status](https://travis-ci.org/shengyur/exercise3.svg?branch=master)
 
 ### 步骤
 
