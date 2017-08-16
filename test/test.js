@@ -30,7 +30,15 @@ describe('jQuery', function () {
     })
   })
 
+  // mocha 在完成异步测试用例时通过done()来标记
   it('should able to request https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js', function (done) {
     // 使用 jQuery.ajax 请求 https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js，并验证是否拿到文件
+    $.ajax({
+      url: 'https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js',
+      type: 'GET',
+      success: function() {
+        done();
+      }
+    })
   })
 })
