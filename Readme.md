@@ -27,6 +27,7 @@ karma init
     5. Should any of the files included by the previous patterns be excluded ? ()
     6. Do you want Karma to watch all the files and run the tests on change ? (yes)
 
+
 * 启动测试
 
 ```
