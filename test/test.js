@@ -18,9 +18,9 @@ describe('jQuery', function () {
       document.body.appendChild(ele)
     })
 
-    it('should able trigger an event', function (done) {
+    it('should able trigger an event', function (done) {  // callback accepts anything will cause a failed test 异步测试
       $(ele).on('click', function () {
-        done()
+        done()  // 只调用一次
       }).trigger('click')
     })
 
@@ -32,5 +32,20 @@ describe('jQuery', function () {
 
   it('should able to request https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js', function (done) {
     // 使用 jQuery.ajax 请求 https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js，并验证是否拿到文件
+    $.ajax({
+      url: "https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js",
+      type: 'GET'
+      // success: function(data){
+      //   done();
+      //   console.log(data);
+      //   return data;
+      // },
+      // error: function (XMLHttpRequest, textStatus, errorThrow) {
+      //   done(errorThrow);
+      // }
+    }).then(res => {
+      done(); // 必须执行 且 一次
+      // console.log(res);
+    });
   })
 })

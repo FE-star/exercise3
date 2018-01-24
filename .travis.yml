@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+  - "8"
+before_install:
+  - npm install npm -g  #更新
+install:
+  - npm install #default
+script:
+  - karma start
+  - karma run
+branches:
+  only:
+    - master  #只监测master分支
+notifications:
+  email:
+    - flcwl@vip.qq.com
+  on_success: change
+  on_failure: always  #default
+cache:
+  directories:
+    - "node_modules"
