@@ -35,13 +35,14 @@ describe('jQuery', function () {
     $.ajax({
         url:'https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js',
         type:'GET',
-    })
-    .done(function(data,status,xhr) {
-        status.should.equal('success')
-        done()
-    })
-    .fail(function(errs){
-        throw new Error(errs)
+        success:function(data,textStatus,xhr) {
+            textStatus.should.equal('success')
+            done()
+        },
+        error:function(errs){
+            throw(errs)
+            // throw new Error(errs)
+        }
     });
   })
 })
