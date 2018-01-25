@@ -1,8 +1,11 @@
 # Readme
 
+[![Build Status](https://www.travis-ci.org/Ivanwangcy/exercise3.svg?branch=master)](https://travis-ci.org/Ivanwangcy/exercise3)
+
 ### 步骤
 
 * 全局安装 karma
+
 
 ```
 npm install -g karma-cli
@@ -38,11 +41,11 @@ karma start
 * 提交github，尝试接入Travis CI  
 
  ** 注意: **
- - build pass, 需要使用 karma start --single-run
+ - 想要 build passing, 需要使用 karma start --single-run
  - 修改 karma.conf.js
  - 增加 .travis.yml
 
- 
+
 ### 参考
 
 * [karma](http://karma-runner.github.io/)
