@@ -33,10 +33,16 @@ karma init
 karma start
 ```
 
-* 打开 `./test/test.js` 修改尝试跑通测试用例 
+* 打开 `./test/test.js` 修改尝试跑通测试用例
 
-* 提交github，尝试接入Travis CI
+* 提交github，尝试接入Travis CI  
 
+ ** 注意: **
+ - build pass, 需要使用 karma start --single-run
+ - 修改 karma.conf.js
+ - 增加 .travis.yml
+
+ 
 ### 参考
 
 * [karma](http://karma-runner.github.io/)

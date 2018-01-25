@@ -66,6 +66,8 @@ module.exports = function(config) {
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity,
+
+    // 接入travis—ci 需要设置
     customLaunchers: {
         Chrome_travis_ci: {
             base: 'Chrome',
