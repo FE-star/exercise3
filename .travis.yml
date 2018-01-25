@@ -4,3 +4,10 @@ node_js:
 
 before_script:
   - npm install karma
+  - karma init
+  - mocha
+  - no
+  - Chrome
+  - https://cdn.bootcss.com/jquery/2.2.4/jquery.js, node_modules/should/should.js, test/**.js
+  - 
+  - yes
