@@ -10,7 +10,6 @@ before_install:
   - sh -e /etc/init.d/xvfb start
   - npm install -g karma-cli
   - npm install
-install: travis_wait mvn install
 script: npm test
 after_script:
   - killall node
