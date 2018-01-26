@@ -11,5 +11,3 @@ before_install:
   - npm install -g karma-cli
   - npm install
 script: npm test
-after_script:
-  - killall node
