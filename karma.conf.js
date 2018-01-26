@@ -62,7 +62,7 @@ module.exports = function(config) {
     // how many browser should be started simultaneous
     concurrency: Infinity
   };
-
+  // https://swizec.com/blog/how-to-run-javascript-tests-in-chrome-on-travis/swizec/6647
   if (process.env.TRAVIS) {
     configuration.browsers = ["Chrome_travis_ci", "Firefox"];
   }
