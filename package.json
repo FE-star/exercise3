@@ -4,6 +4,7 @@
   "description": "test",
   "main": "index.js",
   "scripts": {
+    "init": "karma init",
     "test": "karma start"
   },
   "repository": {
@@ -20,10 +21,11 @@
   },
   "homepage": "https://github.com/FE-star/exercise3#readme",
   "devDependencies": {
-    "karma": "^1.7.0",
+    "karma": "^2.0.0",
     "karma-chrome-launcher": "^2.2.0",
+    "karma-firefox-launcher": "^1.1.0",
     "karma-mocha": "^1.3.0",
-    "mocha": "^3.5.0",
-    "should": "^11.2.1"
+    "mocha": "^5.0.0",
+    "should": "^13.2.1"
   }
 }
