@@ -61,7 +61,7 @@ module.exports = function(config) {
 
     customLanuchers:{
         ChromeHeadlessNoSandbox:{
-            base:'ChromeHeadless',
+            base:'Chrome',
             flags:['--no-sandbox']
         }
     },
@@ -75,7 +75,7 @@ module.exports = function(config) {
     concurrency: Infinity
   }
   if(process.env.TRAVIS){
-    cfg.browsers=['Chrome_travis_ci'];
+    cfg.browsers=['ChromeHeadlessNoSandbox'];
   }
   config.set(cfg)
 }
