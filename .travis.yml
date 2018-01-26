@@ -1,3 +1,5 @@
+sudo: required
+dist: trusty
 addons:
   apt:
     sources:
@@ -7,6 +9,18 @@ addons:
 language: node_js
 node_js:
   - "8"
+env:
+    - EMBER_VERSION=default
+    - EMBER_VERSION=release
+    - EMBER_VERSION=beta
+    - EMBER_VERSION=canary
+matrix:
+  fast_finish: true
+  allow_failures:
+    - env: EMBER_VERSION=release
+    - env: EMBER_VERSION=beta
+    - env: EMBER_VERSION=canary
+
 before_script:
   - npm install -g karma-cli
   - npm install
