@@ -4,7 +4,7 @@
   "description": "test",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/karma start --single-run --browsers karma-chrome-launcher"
+    "test": "./node_modules/.bin/karma start --single-run --browsers Chrome"
   },
   "repository": {
     "type": "git",
