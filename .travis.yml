@@ -1,13 +1,10 @@
-dist: trusty
 sudo: required
 addons:
   chrome: stable
 language: node_js
 node_js:
   - "8"
-before_script:
-  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
-  ⋮
+before_install:
   - npm install -g karma-cli
   - npm install
 script: npm test
