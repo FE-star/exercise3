@@ -11,3 +11,6 @@ before_install:
   - npm install -g karma-cli
   - npm install
 script: npm test
+after_script:
+    # killing background process (because dockerized build no longer does it)
+    - kill -9 9876
