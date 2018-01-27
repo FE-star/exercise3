@@ -1,5 +1,11 @@
 // Karma configuration
 // Generated on Sat Jan 27 2018 22:11:17 GMT+0800 (CST)
+let browsers = ['Chrome'];
+// trvis env
+
+if (process.env.TRAVIS) {
+  browsers = ['Chrome_travis_ci'];
+}
 
 module.exports = function(config) {
   config.set({
@@ -57,7 +63,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: browsers,
 
 
     // Continuous Integration mode
