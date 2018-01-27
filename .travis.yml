@@ -1,5 +1,4 @@
 language: node_js
-sudo: enabled
 addons:
   chrome: beta
 before_install:
