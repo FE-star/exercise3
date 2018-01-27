@@ -3,7 +3,7 @@ node_js:
  - "8"
 
 before_install:
- - sudo apt-get update
+ - sudo apt-get -qq update
  - sudo apt-cache search chrome browser
  - sudo apt-get install chrome-browser
  - node -v
