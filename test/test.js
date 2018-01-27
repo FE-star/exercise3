@@ -30,6 +30,7 @@ describe('jQuery', function () {
     })
   })
 
+  
   it('should able to request https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js', function (done) {
     jQuery.ajax({
       url: 'https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js',
