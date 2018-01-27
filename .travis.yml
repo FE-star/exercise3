@@ -5,6 +5,6 @@ node_js:
 before_install:
   - npm install karma-cli -g
   - npm install
-  - npm install karma-firefox-launcher --save-dev
+  - export CHROME_BIN="/usr/bin/chromium-browser"
 script:
   - npm test
