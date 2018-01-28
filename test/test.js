@@ -37,7 +37,7 @@ describe('jQuery', function() {
       url: 'https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js',
       dataType: 'text',
       success: function(data) {
-        should(data).be.ok();
+        should.exist(data);
         done();
       }
     });
