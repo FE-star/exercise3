@@ -64,7 +64,7 @@ module.exports = function(config) {
   };
   // https://swizec.com/blog/how-to-run-javascript-tests-in-chrome-on-travis/swizec/6647
   if (process.env.TRAVIS) {
-    configuration.browsers = ["Chrome_travis_ci", "Firefox"];
+    configuration.browsers = ["Chrome_travis_ci"];
   }
   config.set(configuration);
 };
