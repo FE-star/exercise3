@@ -36,11 +36,11 @@ describe('jQuery', function () {
         url:'https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js',
         type: 'GET',
         success: function (res) {
-           should.exist(res)
-            done()
+          should.exist(res)
+          done()
         },
         error: function (err) {
-           console.log(err)
+          console.log(err)
         }
     })
   })
