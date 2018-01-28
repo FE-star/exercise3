@@ -20,7 +20,6 @@ describe('jQuery', function () {
 
     it('should able trigger an event', function (done) {
       $(ele).on('click', function () {
-        should.exist(res);
         done()
       }).trigger('click')
     })
