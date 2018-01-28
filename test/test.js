@@ -31,6 +31,14 @@ describe('jQuery', function () {
   })
 
   it('should able to request https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js', function (done) {
+    window.jQuery.ajax({
+      method: 'GET',
+      url:'https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js',
+      success: function(jq) {
+        jq.should.not.equal(null)
+        done()
+      }
+    })
     // 使用 jQuery.ajax 请求 https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js，并验证是否拿到文件
   })
 })
