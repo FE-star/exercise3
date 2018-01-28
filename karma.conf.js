@@ -57,8 +57,7 @@ module.exports = function(config) {
 
     // you can define custom flags
     customLaunchers: {
-      ChromeHeadlessNoSandbox: {
-        base: 'ChromeHeadless',
+      Chrome: {
         flags: ['--no-sandbox']
       }
     },
@@ -70,10 +69,6 @@ module.exports = function(config) {
     // how many browser should be started simultaneous
     concurrency: Infinity
   };
-
-  // if (process.env.TRAVIS) {
-  //   cfg.browsers = ['Chrome_travis_ci'];
-  // }
 
   config.set(cfg);
 }
