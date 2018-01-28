@@ -44,7 +44,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ["Chrome"],
+    browsers: ["Chrome", "Firefox"],
 
     // travis cli 使用 chrome 测试
     customLaunchers: {
