@@ -53,15 +53,15 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome', 'ChromeHeadless', 'ChromeHeadlessNoSandbox'],
+    browsers: ['Chrome'],
 
     // you can define custom flags
-    customLaunchers: {
-      ChromeHeadlessNoSandbox: {
-        base: 'ChromeHeadless',
-        flags: ['--no-sandbox']
-      }
-    },
+    // customLaunchers: {
+    //   ChromeHeadlessNoSandbox: {
+    //     base: 'ChromeHeadless',
+    //     flags: ['--no-sandbox']
+    //   }
+    // },
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
     singleRun: true,
@@ -71,9 +71,9 @@ module.exports = function(config) {
     concurrency: Infinity
   };
 
-  if (process.env.TRAVIS) {
-    cfg.browsers = ['ChromeHeadlessNoSandbox'];
-  }
+  // if (process.env.TRAVIS) {
+  //   cfg.browsers = ['ChromeHeadlessNoSandbox'];
+  // }
 
   config.set(cfg);
 }
