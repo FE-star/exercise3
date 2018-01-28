@@ -1,4 +1,4 @@
- //Karma configuration
+// Karma configuration
 // Generated on Fri Jan 26 2018 21:47:03 GMT+0800 (CST)
 
 module.exports = function(config) {
@@ -44,7 +44,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ["Chrome"],
+    browsers: ["Chrome", "Firefox"],
 
     // travis cli 使用 chrome 测试
     customLaunchers: {
