@@ -2,7 +2,7 @@ language: node_js
 node_js:
  - '7.7.4'
 
-script: npm test --single-run
+script: ./node_modules/.bin/karma start --single-run
 
 sudo: required
 
