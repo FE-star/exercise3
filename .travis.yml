@@ -3,3 +3,9 @@ node_js:
   - "9"
 before_script:
   - npm install -g mocha
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
