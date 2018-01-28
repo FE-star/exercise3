@@ -31,9 +31,17 @@ describe('jQuery', function () {
   })
 
   it('should able to request https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js', function (done) {
-    if ($.getScript('https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js')) {
-      done()
-    }
+    $.ajax({
+     url: 'https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js',
+     type: 'GET',
+     success: function (data) {
+       should.exist(data)
+        done()
+      },
+     error: function (XMLHttpRequest, textStatus, errorThrown) {
+        console.log(errorThrown);
+      }
+     })
   })
 
 })
