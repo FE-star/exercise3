@@ -44,9 +44,10 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ["Chrome"],
+    browsers: ["Chrome", "Firefox"],
 
     // travis cli 使用 chrome 测试
+    // https://docs.travis-ci.com/user/chrome 这里有说明为什么谷歌需要加--no-sandbox这个
     customLaunchers: {
       Chrome_travis_ci: {
         base: "Chrome",
@@ -63,8 +64,8 @@ module.exports = function(config) {
     concurrency: Infinity
   };
   // https://swizec.com/blog/how-to-run-javascript-tests-in-chrome-on-travis/swizec/6647
-  // if (process.env.TRAVIS) {
-  //   configuration.browsers = ["Chrome_travis_ci", "Firefox"];
-  // }
+  if (process.env.TRAVIS) {
+    configuration.browsers = ["Chrome_travis_ci", "Firefox"];
+  }
   config.set(configuration);
 };
