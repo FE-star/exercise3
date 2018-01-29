@@ -35,6 +35,7 @@ describe('jQuery', function () {
        $.ajax({
         url: 'https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js',
         success: e => {
+            should.exists(info)
           done()
         },
         error: err => {
