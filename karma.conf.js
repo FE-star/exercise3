@@ -63,8 +63,8 @@ module.exports = function(config) {
     concurrency: Infinity
   };
   // https://swizec.com/blog/how-to-run-javascript-tests-in-chrome-on-travis/swizec/6647
-  if (process.env.TRAVIS) {
-    configuration.browsers = ["Chrome_travis_ci", "Firefox"];
-  }
+  // if (process.env.TRAVIS) {
+  //   configuration.browsers = ["Chrome_travis_ci", "Firefox"];
+  // }
   config.set(configuration);
 };
