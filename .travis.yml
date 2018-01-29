@@ -1,7 +1,7 @@
 # https://karma-runner.github.io/2.0/plus/travis.html
 language: node_js
 node_js:
-  - "9"
+  - stable
 before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
