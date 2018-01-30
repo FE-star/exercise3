@@ -2,6 +2,7 @@
 // Generated on Tue Jan 30 2018 16:12:35 GMT+0800 (中国标准时间)
 
 module.exports = function(config) {
+  console.log(process.env);
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
