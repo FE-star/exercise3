@@ -12,3 +12,4 @@ before_script:
   - sleep 3 # give xvfb some time to start
 before_install:
   - npm install -g karma-cli
+install: travis_wait mvn install
