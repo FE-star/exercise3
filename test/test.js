@@ -42,8 +42,5 @@ describe('jQuery', function () {
           console.log(err)
         }
       })
-
-
-    // 使用 jQuery.ajax 请求 https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js，并验证是否拿到文件
   })
 })
