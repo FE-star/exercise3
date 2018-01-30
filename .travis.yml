@@ -3,8 +3,6 @@ sudo: required
 node_js:
   - "8"
 dist: trusty
-script:
-  - sh start_server.sh
 addons:
   chrome: stable
 before_install:
