@@ -28,7 +28,7 @@ describe('jQuery', function () {
       document.body.removeChild(ele)
       ele = null
     })
-  })
+  }) 
 
   it('should able to request https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js', function (done) {
     // 使用 jQuery.ajax 请求 https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js，并验证是否拿到文件
@@ -37,7 +37,7 @@ describe('jQuery', function () {
         type:'GET',
         success:function ( res ) {
           should.exist( res );
-          console.log( "取到了文件:" + res )
+          console.log( "取到了文件:")
           done();
         },
         fail:function ( error ){
