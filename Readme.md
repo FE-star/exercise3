@@ -1,6 +1,6 @@
 # Readme
 
-[![Build Status](https://travis-ci.org/display-b/exercise2.svg?branch=master)](https://travis-ci.org/display-b/exercise2)
+[![Build Status](https://travis-ci.org/display-b/exercise3.svg?branch=master)](https://travis-ci.org/display-b/exercise3)
 
 ### 步骤
 
