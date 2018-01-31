@@ -1,5 +1,7 @@
 # Readme
 
+[![](https://travis-ci.org/imhxc/homework1.svg?branch=master)](https://travis-ci.org/imhxc/exercise3)
+
 ### 步骤
 
 * 全局安装 karma
