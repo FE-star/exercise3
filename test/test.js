@@ -1,3 +1,5 @@
+
+
 describe('jQuery', function () {
   it('should have jQuery', function () {
     if (!window.jQuery) {
@@ -32,5 +34,17 @@ describe('jQuery', function () {
 
   it('should able to request https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js', function (done) {
     // 使用 jQuery.ajax 请求 https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js，并验证是否拿到文件
+      $.ajax({
+        url: "https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js",
+        sucess: function(data){
+          should.exist(data);
+        },
+        error: function(){
+          throw new Error("请求文件失败")
+        },
+        complete: function(){
+          done();
+        }
+      });
   })
 })
