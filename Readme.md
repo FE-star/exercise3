@@ -1,5 +1,7 @@
 # Readme
 
+[![Build Status](https://travis-ci.org/display-b/exercise3.svg?branch=master)](https://travis-ci.org/display-b/exercise3)
+
 ### 步骤
 
 * 全局安装 karma

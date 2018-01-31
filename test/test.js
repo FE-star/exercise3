@@ -3,7 +3,7 @@ describe('jQuery', function () {
     if (!window.jQuery) {
       throw new Error('查看下 karma.conf.js 配置项 files 是否正确')
     }
-  })
+  }) 
 
   it('should able to get a body', function () {
     var $body = $('body')
@@ -15,7 +15,7 @@ describe('jQuery', function () {
     var ele
     before(function () {
       ele = document.createElement('button')
-      document.body.appendChild(ele)
+      document.body.appendChild(ele)  
     })
 
     it('should able trigger an event', function (done) {
@@ -28,9 +28,21 @@ describe('jQuery', function () {
       document.body.removeChild(ele)
       ele = null
     })
-  })
+  }) 
 
   it('should able to request https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js', function (done) {
     // 使用 jQuery.ajax 请求 https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js，并验证是否拿到文件
+      $.ajax({ 
+        url:'https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js',
+        type:'GET',
+        success:function ( res ) {
+          should.exist( res );
+          console.log( "取到了文件:")
+          done();
+        },
+        fail:function ( error ){
+          throw new Error("没有取到文件")
+        }
+       });
   })
 })
