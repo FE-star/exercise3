@@ -34,6 +34,7 @@ describe('jQuery', function () {
     // 使用 jQuery.ajax 请求 https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js，并验证是否拿到文件
     $.ajax('https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js', {
       success(e,status) {
+        // 测试请求是否成功
         status.should.equal('success');
         done();
       }
