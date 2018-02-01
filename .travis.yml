@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - "node"
+before_script:
+  - npm install -g karma-cli
+  - npm install
+  - karma init
+  - karma start
+script: mocha
