@@ -3,6 +3,11 @@ language: node_js
 node_js:
   - "6"
 
+sudo: required
+
+addons:
+  chrome: "stable"
+
 before_install:
   - "npm install -g karma-cli"
 
@@ -10,6 +15,3 @@ before_script:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3
-
-after_script:
-  - "npm run report"
