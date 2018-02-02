@@ -40,7 +40,7 @@ module.exports = function(config) {
 
 
     // web server port
-    port: 9000,
+    port: 9867,
 
 
     // enable / disable colors in the output (reporters and logs)
@@ -58,19 +58,11 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome', 'ChromeHeadless', 'ChromeHeadlessNoSandbox'],
-
-    customLaunchers: {
-      ChromeHeadlessNoSandbox: {
-        base: 'Chrome',
-        flags: ['--no-sandbox']
-      }
-    },
-
+    browsers: ['Chrome', 'ChromeHeadless'],
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: true,
+    singleRun: false,
 
     // Concurrency level
     // how many browser should be started simultaneous
