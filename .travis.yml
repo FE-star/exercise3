@@ -1,7 +1,8 @@
 language: node_js
 node_js:
   - '6.11.2'
-script: npm run test
+scripts:
+  - node_modules/karma/bin/karma start karma.conf.js --single-run
 before_install:
   - export CHROME_BIN=chromium-browser
   - export Display=:99.0
