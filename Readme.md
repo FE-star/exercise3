@@ -1,5 +1,7 @@
 # Readme
 
+[![Build Status](https://www.travis-ci.org/wanglei-elf/exercise3.svg?branch=master)](https://www.travis-ci.org/wanglei-elf/exercise3)
+
 ### 步骤
 
 * 全局安装 karma
