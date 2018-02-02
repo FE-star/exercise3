@@ -41,10 +41,8 @@ describe('jQuery', function () {
         },
         error: function(){
           throw new Error("请求文件失败")
-        },
-        complete: function(){
-          done();
         }
       });
+      done();
   })
 })
