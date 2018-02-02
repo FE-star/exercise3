@@ -1,8 +1,8 @@
-// Karma configuration
-// Generated on Wed Jan 31 2018 22:49:41 GMT+0800 (CST)
+/ Karma configuration
+// Generated on Thu Jan 25 2018 11:39:30 GMT+0800 (CST)
 
 module.exports = function(config) {
-  let cfg = {
+  var setting = {
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
@@ -15,10 +15,9 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'node_modules/requirejs/require.js',
-      'https://cdn.bootcss.com/jquery/2.2.4/jquery.js',
       'node_modules/should/should.js',
-      'test/test.js'
+      'test/**.js',
+      'https://cdn.bootcss.com/jquery/2.2.4/jquery.js'
     ],
 
 
@@ -40,7 +39,7 @@ module.exports = function(config) {
 
 
     // web server port
-    port: 9867,
+    port: 9876,
 
 
     // enable / disable colors in the output (reporters and logs)
@@ -73,8 +72,9 @@ module.exports = function(config) {
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity
+  };
+  if (process.env.TRAVIS) {
+    setting.browsers = ['Chrome_travis_ci'];
   }
-  if(process.env.TRAVIS){
-    cfg.browsers=['Chrome_travis_ci'];
-  }
+  config.set(setting);
 }
