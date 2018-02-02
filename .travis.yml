@@ -1,11 +1,11 @@
 language: node_js
 node_js:
   - '6.11.2'
-
-before_script:
-  - npm install karma
-
+dist: trusty
+addons:
+  chrome: stable
 before_install:
+  - npm install -g karam-cli
   - export CHROME_BIN=chromium-browser
   - export Display=:99.0
   - sh -e /etc/init.d/xvfb start
