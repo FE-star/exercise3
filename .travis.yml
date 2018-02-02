@@ -5,7 +5,7 @@ dist: trusty
 addons:
   chrome: stable
 before_install:
-  - npm install -g karam-cli
+  - npm install -g karam
   - export CHROME_BIN=chromium-browser
   - export Display=:99.0
   - sh -e /etc/init.d/xvfb start
