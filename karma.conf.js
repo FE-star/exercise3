@@ -2,7 +2,7 @@
 // Generated on Wed Jan 31 2018 22:49:41 GMT+0800 (CST)
 
 module.exports = function(config) {
-  config.set({
+  let cfg = {
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
@@ -58,10 +58,10 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: ['Chrome', 'ChromeHeadless', 'ChromeHeadlessNoSandbox'],
 
     customLaunchers: {
-      Chrome_travis_ci: {
+      ChromeHeadlessNoSandbox: {
         base: 'Chrome',
         flags: ['--no-sandbox']
       }
@@ -75,5 +75,8 @@ module.exports = function(config) {
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity
-  })
+  }
+  if(process.env.TRAVIS){
+    cfg.browsers=['ChromeHeadlessNoSandbox'];
+  }
 }
