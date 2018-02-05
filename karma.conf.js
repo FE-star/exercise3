@@ -1,6 +1,12 @@
 // Karma configuration
 // Generated on Wed Jan 31 2018 14:38:52 GMT+0800 (CST)
 
+let browsers = ['Chrome']
+
+if (process.env.TRAVIS) {
+  browsers = ['Chrome_travis_ci']
+}
+
 module.exports = function(config) {
   config.set({
 
@@ -57,12 +63,18 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: browsers,
 
+    customLaunchers: {
+      Chrome_travis_ci: {
+        base: 'Chrome',
+        flags: ['--no-sanbox']
+      }
+    },
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false,
+    singleRun: true,
 
     // Concurrency level
     // how many browser should be started simultaneous
