@@ -33,7 +33,7 @@ karma init
 karma start
 ```
 
-* 打开 `./test/test.js` 修改尝试跑通测试用例 
+* 打开 `./test/test.js` 修改尝试跑通测试用例
 
 * 提交github，尝试接入Travis CI
 
@@ -41,3 +41,5 @@ karma start
 
 * [karma](http://karma-runner.github.io/)
 * [jQuery 中文文档](http://jquery.cuishifeng.cn/)
+* [GUI and Headless Browser Testing](https://docs.travis-ci.com/user/gui-and-headless-browsers/)
+* [Cannot start ChromeHeadless](https://github.com/travis-ci/travis-ci/issues/9024)
