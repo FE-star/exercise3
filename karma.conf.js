@@ -55,6 +55,7 @@ module.exports = function(config) {
 
     // 插件配置
     plugins: [
+      'karma-mocha',
       'karma-chrome-launcher',
     ],
 
