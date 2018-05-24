@@ -4,7 +4,7 @@
   "description": "test",
   "main": "index.js",
   "scripts": {
-    "test": "karma start  --no-sandbox"
+    "test": "karma start --browsers Chrome,Chrome_without_security"
   },
   "repository": {
     "type": "git",
