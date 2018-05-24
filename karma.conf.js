@@ -61,6 +61,10 @@ module.exports = function(config) {
 
     // 浏览器配置
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
+    // 配置参考
+    // https://docs.travis-ci.com/user/chrome
+    // https://github.com/karma-runner/karma-chrome-launcher/issues/158
+    //
     browsers: ['ChromeHeadlessNoSandbox'],
     customLaunchers: {
       ChromeHeadlessNoSandbox: {
@@ -69,10 +73,9 @@ module.exports = function(config) {
       }
     },
 
-
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false,
+    singleRun: true,
 
     // Concurrency level
     // how many browser should be started simultaneous
