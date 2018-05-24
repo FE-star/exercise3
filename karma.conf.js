@@ -3,16 +3,6 @@
 
 module.exports = function(config) {
   config.set({
-    // 浏览器设置 & 自定义参数。
-    // 参考配置: https://docs.travis-ci.com/user/chrome
-    browsers: ['Chrome', 'ChromeHeadless', 'ChromeHeadlessNoSandbox'],
-    customLaunchers: {
-      ChromeHeadlessNoSandbox: {
-        base: 'ChromeHeadless',
-        flags: ['--no-sandbox']
-      }
-    },
-
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
 
@@ -66,7 +56,19 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    // 浏览器设置 & 自定义参数。
+    // 参考配置: https://docs.travis-ci.com/user/chrome
+    browsers: ['Chrome', 'ChromeHeadless', 'ChromeHeadlessNoSandbox'],
+    customLaunchers: {
+      ChromeHeadlessNoSandbox: {
+        base: 'ChromeHeadless',
+        flags: ['--no-sandbox']
+      },
+      Chrome_without_security: {
+        base: 'Chrome',
+        flags: ['--disable-web-security']
+      }
+    },
 
 
     // Continuous Integration mode
