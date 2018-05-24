@@ -58,12 +58,10 @@ module.exports = function(config) {
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     // 浏览器设置 & 自定义参数。
     // 参考配置: https://docs.travis-ci.com/user/chrome
-    browsers: ['Chrome', 'ChromeHeadless', 'ChromeHeadlessNoSandbox'],
+    browsers: ['Chrome', 'Chrome_without_security'], // You may use 'ChromeCanary', 'Chromium' or any other supported browser
+
+    // you can define custom flags
     customLaunchers: {
-      ChromeHeadlessNoSandbox: {
-        base: 'ChromeHeadless',
-        flags: ['--no-sandbox']
-      },
       Chrome_without_security: {
         base: 'Chrome',
         flags: ['--disable-web-security']
