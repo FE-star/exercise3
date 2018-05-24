@@ -62,7 +62,7 @@ module.exports = function(config) {
         Chrome_without_security: {
             base: 'Chrome',
             flags: ['--disable-web-security']
-         }
+         },
          ChromeHeadlessNoSandbox: {
            base: 'ChromeHeadless',
            flags: ['--no-sandbox']
