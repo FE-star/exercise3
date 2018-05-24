@@ -53,11 +53,13 @@ module.exports = function(config) {
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: true,
 
+    // 插件配置
+    plugins: [
+      'karma-chrome-launcher',
+    ],
 
-    // start these browsers
+    // 浏览器配置
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    // 浏览器设置 & 自定义参数。
-    // 参考配置: https://docs.travis-ci.com/user/chrome
     browsers: ['Chrome', 'Chrome_without_security'], // You may use 'ChromeCanary', 'Chromium' or any other supported browser
 
     // you can define custom flags
