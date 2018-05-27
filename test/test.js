@@ -32,5 +32,53 @@ describe('jQuery', function () {
 
   it('should able to request https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js', function (done) {
     // 使用 jQuery.ajax 请求 https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js，并验证是否拿到文件
+      let content = `var assert = require('assert')
+
+describe('Array', function() {
+  describe('#indexOf()', function() {
+    it('should return -1 when the value is not present', function() {
+      assert.equal(-1, [1, 2, 3]/* 填空题 */)
+    })
+  })
+})
+
+describe('assert', function () {
+  it('a和b应当深度相等', function () {
+    var a = {
+      c: {
+        e: 1
+      }
+    }
+    var b = {
+      c: {
+        e: 1
+      }
+    }
+    // 修改下面代码使得满足测试描述
+    assert.equal(a, b)
+  })
+
+  it('可以捕获并验证函数fn的错误', function () {
+    function fn() {
+      xxx;
+    }
+    // 修改下面代码使得满足测试描述
+    fn()
+  })
+})`
+    this.timeout(30000);
+    jQuery.ajax({
+        url:'https://rawgithubusercontent.com/FE-star/exercise1/master/test/test.js',
+        dataType:'text',
+        type:'GET',
+        success(res){
+          console.log('======success======',res)
+          res.should.equal(content)
+          done(res)
+        },
+        error(xml,msg,obj){
+          console.log('======error=======',xml,msg,obj)
+        }
+    })
   })
 })
