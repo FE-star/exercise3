@@ -65,20 +65,18 @@ describe('assert', function () {
     // 修改下面代码使得满足测试描述
     fn()
   })
-})`
-    this.timeout(30000);
-    jQuery.ajax({
-        url:'https://rawgithubusercontent.com/FE-star/exercise1/master/test/test.js',
-        dataType:'text',
-        type:'GET',
-        success(res){
-          console.log('======success======',res)
+})`;
+
+
+      $.ajax({
+          url:'https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js',
+          dataType:'text',
+          type:'GET'
+      }).then(res=>{
+          //console.log(res)
           res.should.equal(content)
-          done(res)
-        },
-        error(xml,msg,obj){
-          console.log('======error=======',xml,msg,obj)
-        }
-    })
+
+          done();
+      })
   })
 })
