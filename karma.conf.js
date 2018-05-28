@@ -75,8 +75,8 @@ module.exports = function(config) {
     // how many browser should be started simultaneous
     concurrency: Infinity
   };
-  if(process.env.CI) {
-    configuration.browsers = ['Chrome_CI'];
+  if(process.env.TRAVIS) {
+    configuration.browsers = configuration.customLaunchers['Chrome_CI'];
   }
   config.set(configuration);
 }
