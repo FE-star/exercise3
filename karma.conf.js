@@ -59,6 +59,13 @@ module.exports = function(config) {
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: ['Chrome'],
 
+    customLaunchers:{
+      Chrome_CI:{
+        base:'Chrome',
+        flags:['--no-sandbox']
+      }
+    },
+
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
@@ -68,4 +75,7 @@ module.exports = function(config) {
     // how many browser should be started simultaneous
     concurrency: Infinity
   })
+  if(process.env.CI) {
+    configuration.browsers = ['Chrome_CI']
+  }
 }

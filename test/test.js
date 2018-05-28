@@ -32,7 +32,7 @@ describe('jQuery', function () {
 
   it('should able to request https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js', function (done) {
     // 使用 jQuery.ajax 请求 https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js，并验证是否拿到文件
-      let content = `var assert = require('assert')
+      let rescontent = `var assert = require('assert')
 
 describe('Array', function() {
   describe('#indexOf()', function() {
@@ -74,7 +74,7 @@ describe('assert', function () {
           type:'GET'
       }).then(res=>{
           //console.log(res)
-          res.should.equal(content)
+          res.should.equal(rescontent)
 
           done();
       })
