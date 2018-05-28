@@ -10,4 +10,3 @@ before_install:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
 scirpt: node_modules/karma/bin/karma start karma.conf.js --single-run
-install: travis_wait mvn install
