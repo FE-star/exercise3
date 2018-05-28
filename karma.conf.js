@@ -2,7 +2,7 @@
 // Generated on Mon May 28 2018 00:54:09 GMT+0800 (中国标准时间)
 
 module.exports = function(config) {
-  config.set({
+  let configuration = {
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
@@ -74,8 +74,9 @@ module.exports = function(config) {
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity
-  })
+  };
   if(process.env.CI) {
-    config.browsers = ['Chrome_CI']
+    configuration.browsers = ['Chrome_CI'];
   }
+  config.set(configuration);
 }
