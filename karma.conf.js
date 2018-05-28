@@ -76,6 +76,6 @@ module.exports = function(config) {
     concurrency: Infinity
   })
   if(process.env.CI) {
-    configuration.browsers = ['Chrome_CI']
+    config.browsers = ['Chrome_CI']
   }
 }
