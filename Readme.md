@@ -1,3 +1,5 @@
+karma的使用，并接入Travis CI
+![Travis CI](https://travis-ci.org/RUSHUI/exercise3.svg?branch=master)
 # Readme
 
 ### 步骤
