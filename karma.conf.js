@@ -1,13 +1,8 @@
 // Karma configuration
 // Generated on Wed May 30 2018 23:02:20 GMT+0800 (CST)
 var argus = process.argv.slice(3);
-console.log(argus);
-var isDev = false;
-argus.forEach(function (item) {
-  if (item.indexOf('--debug') >= 0) {
-    isDev = true;
-  }
-})
+var isDev = argus.indexOf('--debug') >= 0;
+
 module.exports = function(config) {
   config.set({
 
