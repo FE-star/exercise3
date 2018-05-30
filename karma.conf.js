@@ -1,6 +1,13 @@
 // Karma configuration
 // Generated on Wed May 30 2018 23:02:20 GMT+0800 (CST)
-
+var argus = process.argv.slice(3);
+console.log(argus);
+var isDev = false;
+argus.forEach(function (item) {
+  if (item.indexOf('--debug') >= 0) {
+    isDev = true;
+  }
+})
 module.exports = function(config) {
   config.set({
 
@@ -62,12 +69,12 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false,
+    singleRun: isDev,
 
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity,
 
-    processKillTimeout: 200
+    browserNoActivityTimeout: 2000
   })
 }
