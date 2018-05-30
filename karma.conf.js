@@ -2,6 +2,7 @@
 // Generated on Wed May 30 2018 23:02:20 GMT+0800 (CST)
 var argus = process.argv.slice(3);
 var isDev = argus.indexOf('--debug') >= 0;
+var browser = argus.indexOf('--travis') >= 0 ? 'PhantomJS' : 'Chrome';
 
 module.exports = function(config) {
   config.set({
