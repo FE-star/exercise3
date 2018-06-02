@@ -2,7 +2,7 @@
 // Generated on Sat Jun 02 2018 15:19:19 GMT+0800 (CST)
 
 module.exports = function(config) {
-  let config = {
+  let settings = {
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
@@ -70,8 +70,8 @@ module.exports = function(config) {
 
   // 如果运行在travis ci环境中，使用Chrome_travis_ci
   if (process.env.TRAVIS) {
-    config.browsers = ['Chrome_travis_ci'];
+    settings.browsers = ['Chrome_travis_ci'];
   }
 
-  config.set(config);
+  config.set(settings);
 }
