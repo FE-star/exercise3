@@ -2,7 +2,7 @@
 // Generated on Sat Jun 02 2018 15:19:19 GMT+0800 (CST)
 
 module.exports = function(config) {
-  config.set({
+  let config = {
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
@@ -20,7 +20,6 @@ module.exports = function(config) {
       'test/**.js'
     ],
 
-
     // list of files to exclude
     exclude: [
     ],
@@ -35,7 +34,7 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['mocha'],
 
 
     // web server port
@@ -62,10 +61,17 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false,
+    singleRun: true,
 
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity
-  })
+  }
+
+  // 如果运行在travis ci环境中，使用Chrome_travis_ci
+  if (process.env.TRAVIS) {
+    config.browsers = ['Chrome_travis_ci'];
+  }
+
+  config.set(config);
 }
