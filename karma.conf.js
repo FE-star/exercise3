@@ -66,6 +66,6 @@ module.exports = function(config) {
     // how many browser should be started simultaneous
     concurrency: Infinity,
     
-    plugins: ['karma-jasmine', 'karma-phantomjs-launcher']
+    plugins: ['karma-phantomjs-launcher']
   })
 }
