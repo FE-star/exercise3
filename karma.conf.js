@@ -3,7 +3,13 @@
 
 module.exports = function(config) {
   config.set({
-
+    // you can define custom flags
+    customLaunchers: {
+      ChromeNoSandbox: {
+        base: 'Chrome',
+        flags: ['--no-sandbox']
+      }
+    },
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
 
