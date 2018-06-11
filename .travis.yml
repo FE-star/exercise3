@@ -1,11 +1,13 @@
 language: node_js
 node_js:
-    - 8
+ - 8
 sudo: required
+addons:
+ chrome: stable
 install:
 |
-  npm --version
-  npm install --registry http://registry.npmjs.org
-  npm install
+ npm --version
+ npm install --registry http://registry.npmjs.org
+ npm install
 script:
 - npm run test
