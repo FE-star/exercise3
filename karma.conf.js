@@ -3,7 +3,6 @@
 
 module.exports = function(config) {
   var configuration = {
-
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
 
@@ -52,12 +51,13 @@ module.exports = function(config) {
 
 
     // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: true,
+    autoWatch: false,
 
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: ['Chrome', 'ChromeHeadless', 'ChromeHeadlessNoSandbox'],
+
     customLaunchers: {
         ChromeHeadlessNoSandbox: {
             base: 'ChromeHeadless',
@@ -72,10 +72,9 @@ module.exports = function(config) {
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity
-  }
+  };
   if (process.env.TRAVIS) {
-    console.log(process.env);
     configuration.singleRun = true;
   }
-  config.set(configuration);
+	config.set(configuration);
 }
