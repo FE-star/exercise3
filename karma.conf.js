@@ -3,13 +3,6 @@
 
 module.exports = function(config) {
   config.set({
-    // you can define custom flags
-    customLaunchers: {
-      ChromeNoSandbox: {
-        base: 'Chrome',
-        flags: ['--no-sandbox']
-      }
-    },
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
 
@@ -26,22 +19,24 @@ module.exports = function(config) {
       'test/*.js'
     ],
 
-
     // list of files to exclude
     exclude: [
     ],
-
-
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      'test/*.js': ['coverage']
     },
 
-
+    // optionally, configure the reporter
+    coverageReporter: {
+      type : 'html',
+      dir : 'coverage/'
+    },
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['progress', 'coverage'],
 
 
     // web server port
