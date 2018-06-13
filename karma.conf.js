@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Wed Jun 13 2018 21:54:56 GMT+0800 (中国标准时间)
+// Generated on Wed Jun 13 2018 22:47:11 GMT+0800 (中国标准时间)
 
 module.exports = function(config) {
   config.set({
@@ -57,7 +57,14 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: ['Chrome', 'ChromeHeadless', 'ChromeHeadlessNoSandbox'],
+    // you can define custom flags
+    customLaunchers: {
+      ChromeHeadlessNoSandbox: {
+        base: 'ChromeHeadless',
+        flags: ['--no-sandbox']
+      }
+    }
 
 
     // Continuous Integration mode
