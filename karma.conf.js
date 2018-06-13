@@ -64,7 +64,7 @@ module.exports = function(config) {
         base: 'ChromeHeadless',
         flags: ['--no-sandbox']
       }
-    }
+    },
 
 
     // Continuous Integration mode
