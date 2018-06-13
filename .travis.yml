@@ -1,6 +1,8 @@
 language: node_js
 node_js:
   - "9.3"
+addons:
+ chrome: stable
 git:
   depth: 1
 install:
