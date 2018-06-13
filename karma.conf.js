@@ -2,7 +2,7 @@
 // Generated on Wed Jun 13 2018 22:47:11 GMT+0800 (中国标准时间)
 
 module.exports = function(config) {
-  config.set({
+  var configuration = {
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
@@ -74,5 +74,9 @@ module.exports = function(config) {
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity
-  })
+  }
+  if (process.env.TRAVIS) {
+     configuration.singleRun = true;
+  }
+  config.set(configuration);
 }
