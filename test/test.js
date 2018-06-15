@@ -32,5 +32,40 @@ describe('jQuery', function () {
 
   it('should able to request https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js', function (done) {
     // 使用 jQuery.ajax 请求 https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js，并验证是否拿到文件
+
+    $.ajax({
+      type: "GET",
+      url: "https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js",
+      success(){
+        done()
+      }
+  });
+
   })
 })
+// 加法函数
+// function add(x){
+//   return function(y){
+//       return x + y;
+//   }
+// }
+// // 乘法函数
+// function multi(x){
+//   return function(y){
+//       return x * y + 1;
+//   }
+// }
+
+// describe("运算功能单元测试",function(){
+//   it("加法函数测试",function(){
+//       var add5 = add(5)
+//       add5(5).should.equal(10)
+//   });
+
+//   it("乘法函数测试",function(){
+//       var multi5 = multi(5)
+//       multi5(5).should.equal(25)
+//   })
+//   console.log(1)
+// })
+
