@@ -43,29 +43,5 @@ describe('jQuery', function () {
 
   })
 })
-// 加法函数
-// function add(x){
-//   return function(y){
-//       return x + y;
-//   }
-// }
-// // 乘法函数
-// function multi(x){
-//   return function(y){
-//       return x * y + 1;
-//   }
-// }
 
-// describe("运算功能单元测试",function(){
-//   it("加法函数测试",function(){
-//       var add5 = add(5)
-//       add5(5).should.equal(10)
-//   });
-
-//   it("乘法函数测试",function(){
-//       var multi5 = multi(5)
-//       multi5(5).should.equal(25)
-//   })
-//   console.log(1)
-// })
 
