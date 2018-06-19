@@ -1,0 +1,9 @@
+language:
+  node_js
+node_js:
+  10.3.0
+install:
+  - npm install -g karma-cli
+  - npm install
+script:
+  karma start
