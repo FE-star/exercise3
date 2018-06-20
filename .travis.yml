@@ -1,10 +1,21 @@
 language: node_js
 node_js:
   - "8"
+dist: trusty
+sudo: required
+addons:
+  chrome: stable  #Chrome addon
 before_install:
   - npm install npm -g  #更新
 install:
-  - npm install #default
+  - npm install  #default
+before_script:
+  - export CHROME_BIN=chromium-browser
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start  #xvfb提供运行的环境
+  - sleep 3 # give xvfb some time to start
+  - rackup  # start a Web server
+  - sleep 3 # give Web server some time to bind to sockets, etc
 script:
   - karma start
   - karma run
