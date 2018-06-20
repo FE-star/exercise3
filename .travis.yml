@@ -16,7 +16,7 @@ before_script:
   - sleep 3 # give xvfb some time to start
 script:
   - karma start
-  - karma run
+  # - karma run
 branches:
   only:
     - master  #只监测master分支
