@@ -39,6 +39,5 @@ describe('jQuery', function () {
         done();
       }
     });
-    done();
   })
 })
