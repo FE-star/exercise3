@@ -2,9 +2,16 @@ language: node_js
 node_js:
   - '8'
 
-sudo: required
+# sudo: required
+# addons:
+#   chrome: stable
+
+dist: trusty
 addons:
   chrome: stable
+before_install:
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+  ⋮
 
 install:
   - npm install
