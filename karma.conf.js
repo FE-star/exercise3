@@ -1,8 +1,8 @@
 // Karma configuration
-// Generated on Thu Jun 21 2018 10:16:59 GMT+0800 (中国标准时间)
+// Generated on Sat Jun 16 2018 15:38:10 GMT+0800 (中国标准时间)
 
 module.exports = function(config) {
-  var configuration = {
+  config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
@@ -59,7 +59,8 @@ module.exports = function(config) {
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: ['Chrome', 'ChromeHeadless', 'ChromeHeadlessNoSandbox'],
 
-    // you can define custom flags
+
+    // you can define custom flags，otherwise you can pass travis CI:cannot start chromeheadless
     customLaunchers: {
       ChromeHeadlessNoSandbox: {
         base: 'ChromeHeadless',
@@ -67,16 +68,13 @@ module.exports = function(config) {
       }
     },
 
+
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false,
+    singleRun: true,
 
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity
-  };
-  if(process.env.TRAVIS) {
-    configuration.singleRun = true;
-  }
-	config.set(configuration);
+  })
 }
