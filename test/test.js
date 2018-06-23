@@ -32,5 +32,25 @@ describe('jQuery', function () {
 
   it('should able to request https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js', function (done) {
     // 使用 jQuery.ajax 请求 https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js，并验证是否拿到文件
+    $.ajax({
+      type: 'GET',
+      // dataType: 'json',
+      url: 'https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js',
+      data: $('#apply-form').serialize(),
+      success: function (result) {
+        // console.log(result);
+        if (result) {
+          console.log('拿到文件啦');
+        } else {
+          console.log('没有取到文件');
+        }
+        done && done();
+      },
+      error: function (e) {
+        console.log('网络请求超时, 请重试');
+        console.log('err: ', e);
+        done && done();
+      }
+    });
   })
 })
