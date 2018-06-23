@@ -36,12 +36,12 @@ describe('jQuery', function () {
 		url:'https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js',
 		method:'Get',
 		success(res){
-		 console.log(res);
-         done();
+		  console.log(res);
+          done();
 		},
 		error(err){
-		 console.log(err);
-         done();
+		  console.log(err);
+          done();
 		}
 	})
   })
