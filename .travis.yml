@@ -1,7 +1,8 @@
 language: node_js
 node_js:
   - '8'
+dist: trusty
 addons:
   chrome: stable
 before_install:
-  - npm install mocha -g
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost & npm install mocha -g
