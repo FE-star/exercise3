@@ -3,7 +3,6 @@ node_js:
   - "8"
 script: karma start --single-run
 before_install:
-  - npm install -g mocha
   - npm install
   - export CHROME_BIN=chromium-browser
   - export DISPLAY=:99.0
