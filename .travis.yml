@@ -17,7 +17,12 @@ node_js:
 # before_script:
 #   - npm install -g karma-cli
 #   - npm install
+before_install:
+  export CHROME_BIN=/usr/bin/chromium-browser
 install:
   - npm install -g karma-cli
   - npm install
 script: npm test
+
+
+# https://github.com/npm/npm/issues/20954
