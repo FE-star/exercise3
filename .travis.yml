@@ -1,37 +1,4 @@
 
-# # https://docs.travis-ci.com/user/languages/javascript-with-nodejs/
-# # 访问获取更多
-
-# sudo: required
-# dist: trusty
-# addons:
-#   chrome: stable
-# # addons:
-# #   apt:
-# #     sources:
-# #       - google-chrome
-# #     packages:
-# #       - google-chrome-stable
-# language: node_js
-# node_js:
-#   - "11.0.0"
-
-# # before_script:
-
-# before_install:
-#   export CHROME_BIN=/usr/bin/chromium-browser
-# install:
-#   - npm install -g karma-cli
-#   - npm install
-
-
-
-  
-# script: npm test
-
-
-# # https://github.com/npm/npm/issues/20954
-
 
 dist: trusty
  sudo: required
