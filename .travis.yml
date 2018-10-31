@@ -1,0 +1,12 @@
+
+# https://docs.travis-ci.com/user/languages/javascript-with-nodejs/
+# 访问获取更多
+
+language: node_js
+node_js:
+  - "iojs"
+  - "7"
+script: npm test
+install:
+  - npm install -g karma-cli
+  - npm install
