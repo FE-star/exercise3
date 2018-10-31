@@ -1,5 +1,5 @@
 # Readme
-
+[![Build Status](https://travis-ci.org/BeAce/exercise3.svg?branch=master)](https://travis-ci.org/BeAce/exercise3)
 ### 步骤
 
 * 全局安装 karma
@@ -33,7 +33,7 @@ karma init
 karma start
 ```
 
-* 打开 `./test/test.js` 修改尝试跑通测试用例 
+* 打开 `./test/test.js` 修改尝试跑通测试用例
 
 * 提交github，尝试接入Travis CI
 
