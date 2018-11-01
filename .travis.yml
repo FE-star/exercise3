@@ -1,10 +1,8 @@
-language: node-js
-node-js:
-  - "8.11.1"
-addons:
-  chrome: beta
+language: node_js
+node_js:
+  - "8"
+script: karma start --single-run --browsers Chrome
 before_install:
-  - # start your web application and listen on `localhost`
-  - "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome --headless --disable-gpu --remote-debugging-port=9876 http://10.31.36.28 &"
-  script:
-  - npm run test
+  - npm install
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start

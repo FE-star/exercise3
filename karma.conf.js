@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Thu Nov 01 2018 10:23:05 GMT+0800 (CST)
+// Generated on Thu Nov 01 2018 11:21:27 GMT+0800 (CST)
 
 module.exports = function(config) {
   config.set({
@@ -15,7 +15,9 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'https://cdn.bootcss.com/jquery/2.2.4/jquery.js, node_modules/should/should.js, test/**.js'
+      'https://cdn.bootcss.com/jquery/2.2.4/jquery.js',
+      'node_modules/should/should.js',
+      'test/**.js'
     ],
 
 
