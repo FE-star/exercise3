@@ -1,0 +1,10 @@
+language: node-js
+node-js:
+ - "8.11.1"
+ addons:
+  chrome: beta
+before_install:
+  - # start your web application and listen on `localhost`
+  - "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome --headless --disable-gpu --remote-debugging-port=9876 http://222.212.88.38 &"
+  script:
+  - npm run test
