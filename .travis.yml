@@ -4,3 +4,7 @@ node_js:
 
 script: karma start --single-run
 
+before_script:
+  - npm install -g karma-cli
+
+os: osx
