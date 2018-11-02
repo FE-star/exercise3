@@ -12,9 +12,10 @@ node_js:
 branches:
   only:
     - master
+install: npm install
 # 要执行的脚本
 script:
-  - npm run test
+  - karma start test/karma.conf.js
 # 配置当构建失败的时候发送通知 https://docs.travis-ci.com/user/notifications
 notifications:
   # 设置 TravisBuddy，每当 pull request 构建失败的时候，TravisBuddy 会收到通知
