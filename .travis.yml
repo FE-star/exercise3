@@ -1,5 +1,8 @@
 language: node_js
 node_js:
   - "8"
+addons:
+  chrome: beta
 before_install:
-   - npm install -g karma-cli
+  - npm install -g karma-cli
+  - "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome --headless --disable-gpu --remote-debugging-port=9876 http://localhost &"
