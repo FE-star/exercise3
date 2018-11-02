@@ -13,6 +13,9 @@ branches:
 # 执行install
 install:
  - npm install mocha karma-cli -g
+ - cd node_modules\karma-jasmine
+ - npm install
+ - cd ../../
  - npm install
 
 # 执行命令脚本
