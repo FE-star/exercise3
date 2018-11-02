@@ -1,4 +1,4 @@
 language: node_js
-# nodejs版本
+# 当前nodejs版本
 node_js:
 - '10'
