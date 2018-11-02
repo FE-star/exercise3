@@ -23,7 +23,7 @@ describe('jQuery', function () {
         done()
       }).trigger('click')
     })
-
+    
     after(function () {
       document.body.removeChild(ele)
       ele = null
