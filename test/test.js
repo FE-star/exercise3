@@ -17,7 +17,9 @@ describe('jQuery', function () {
       ele = document.createElement('button')
       document.body.appendChild(ele)
     })
-
+    it('test for Travis CI', function() {
+      should(2).equal(1)
+    })
     it('should able trigger an event', function (done) {
       $(ele).on('click', function () {
         done()
