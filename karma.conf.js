@@ -2,7 +2,7 @@
 // Generated on Thu Nov 01 2018 23:03:16 GMT+0800 (GMT+08:00)
 
 module.exports = function(config) {
-  config.set({
+  const configuration = {
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
@@ -67,5 +67,11 @@ module.exports = function(config) {
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity
-  })
+  }
+  
+  if (process.env.TRAVIS) {
+    configuration.browsers = ['Firefox']
+  }
+
+  config.set(configuration);
 }
