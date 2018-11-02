@@ -1,4 +1,4 @@
-
+os: oxs
 sudo: required
 addons:
   chrome: stable
