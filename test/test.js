@@ -18,7 +18,7 @@ describe('jQuery', function () {
       document.body.appendChild(ele)
     })
     it('test for Travis CI', function() {
-      should(2).equal(1)
+      should(2).equal(11)
     })
     it('should able trigger an event', function (done) {
       $(ele).on('click', function () {
