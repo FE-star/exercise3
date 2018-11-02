@@ -13,7 +13,7 @@ branches:
     - master
 # 要执行的脚本
 script:
-  - npm test
+  - npm run test
 # 配置当构建失败的时候发送通知 https://docs.travis-ci.com/user/notifications
 notifications:
   # 设置 TravisBuddy，每当 pull request 构建失败的时候，TravisBuddy 会收到通知
