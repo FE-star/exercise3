@@ -1,9 +1,15 @@
 language:node-js
 node-js:
--8
+  - "8"
 befor-install:
 npm install -g karma-cli
 install:
 npm install
+before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
 script:
 karma start --single-run
+dist: trusty
+addons:
+  chrome: stable
