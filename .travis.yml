@@ -6,6 +6,6 @@ script: karma start
 addons:
   chrome: stable 
 before_script:
-  - sudo npm install -g karma-cli
+  - npm install -g karma-cli
 
 os: osx
