@@ -1,0 +1,9 @@
+language:node-js
+node-js:
+-8
+befor-install:
+npm install -g karma-cli
+install:
+npm install
+script:
+karma start --single-run
