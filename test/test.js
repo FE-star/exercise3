@@ -20,7 +20,7 @@ describe('jQuery', function () {
 
     it('should able trigger an event', function (done) {
       $(ele).on('click', function () {
-        done()
+        return done()
       }).trigger('click')
     })
 
@@ -32,5 +32,19 @@ describe('jQuery', function () {
 
   it('should able to request https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js', function (done) {
     // 使用 jQuery.ajax 请求 https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js，并验证是否拿到文件
+      $.ajax({
+          url: "https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js",
+          type:'GET',
+          async:true,
+          success: function(resp){
+            if(resp){
+                done()
+            }else{
+              throw new Error('数据获取失败');
+            }
+      },
+      failure:function(){
+            throw new Error('请求失败');
+      }});
   })
 })
