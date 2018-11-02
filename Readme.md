@@ -1,5 +1,5 @@
 # Readme
-
+![travis ci](https://travis-ci.org/baihexx/exercise3.svg?branch=master)
 ### 步骤
 
 * 全局安装 karma
