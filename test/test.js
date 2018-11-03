@@ -1,4 +1,4 @@
-describe('jQuery测试测试测试', function () {
+describe('jQuery', function () {
   it('should have jQuery', function () {
     if (!window.jQuery) {
       throw new Error('查看下 karma.conf.js 配置项 files 是否正确')
@@ -32,23 +32,17 @@ describe('jQuery测试测试测试', function () {
 
   it('should able to request https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js', function (done) {
     // 使用 jQuery.ajax 请求 https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js，并验证是否拿到文件
-    it('异步请求应该返回一个对象', done => {
-      // request
-      //   .get('https://api.github.com')
-      //   .end(function (err, res) {
-      //     expect(res).to.be.an('object');
-      //     done();
-      //   });
+    // it('异步请求应该返回一个对象', done => {
 
-      $.ajax({
-        url: "https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js",
-        success: function (res) {
-          res.should.ok;
-          done();
-        }
+    $.ajax({
+      url: "https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js",
+      success: function (res) {
+        res.should.ok;
+        done();
+      }
 
-      });
     });
+    // });
   })
 
 })
