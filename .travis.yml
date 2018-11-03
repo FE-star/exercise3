@@ -1,3 +1,5 @@
 language: node.js
 node_js:
  - "9"
+before_install:
+  - npm install -g karma-cli
