@@ -75,7 +75,7 @@ module.exports = function(config) {
               flags: ['--no-sandbox']
           }
       };
-      singleRun = true;
+      configuration.singleRun = true;
   }
   config.set(configuration)
 }
