@@ -67,7 +67,8 @@ module.exports = function(config) {
       // how many browser should be started simultaneous
       concurrency: Infinity
   }
-  if (process.env.TRAVIS) {
+  // if (process.env.TRAVIS) {
+      // 配置travis_ci的默认浏览器为chrome 但是似乎注释这段代码也没有报错
       // configuration.browsers = ['Chrome_travis_ci'];
       // configuration.customLaunchers = {
       //     Chrome_travis_ci: {
@@ -75,7 +76,7 @@ module.exports = function(config) {
       //         flags: ['--no-sandbox']
       //     }
       // };
-      configuration.singleRun = true;
-  }
+      // configuration.singleRun = true;
+  // }
   config.set(configuration)
 }
