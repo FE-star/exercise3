@@ -1,10 +1,8 @@
 language: node_js
 node_js:
  - "10"
-dist: trusty
+sodu: required
 addons:
   chrome: stable
-before_install:
-  - # start your web application and listen on `localhost`
-  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9876 http://localhost &
-  ⋮
+before_script:
+  - npm install karma-cli -g
