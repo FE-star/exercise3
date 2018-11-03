@@ -28,9 +28,17 @@ describe('jQuery', function () {
       document.body.removeChild(ele)
       ele = null
     })
-  })
+  });
 
   it('should able to request https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js', function (done) {
-    // 使用 jQuery.ajax 请求 https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js，并验证是否拿到文件
+    $.ajax({
+      type:'GET',
+      url:'https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js',
+      dataType:'text/plain',
+      success: function(res){
+        console.log('success');
+      }
+    });
+    done();
   })
-})
+});
