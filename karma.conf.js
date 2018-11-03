@@ -68,13 +68,13 @@ module.exports = function(config) {
       concurrency: Infinity
   }
   if (process.env.TRAVIS) {
-      configuration.browsers = ['Chrome_travis_ci'];
-      configuration.customLaunchers = {
-          Chrome_travis_ci: {
-              base: 'Chrome',
-              flags: ['--no-sandbox']
-          }
-      };
+      // configuration.browsers = ['Chrome_travis_ci'];
+      // configuration.customLaunchers = {
+      //     Chrome_travis_ci: {
+      //         base: 'Chrome',
+      //         flags: ['--no-sandbox']
+      //     }
+      // };
       configuration.singleRun = true;
   }
   config.set(configuration)
