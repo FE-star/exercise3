@@ -3,21 +3,10 @@ language: node_js
 
 # 使用的nodejs版本
 node_js:
-  - "10"
-
-# 仓库的分支
-branches:
-  only:
-  - master
-
+  - "9"
+  - "8"
+  
 # 执行install
 install:
- - npm install mocha karma-cli -g
- - cd node_modules\karma-jasmine
+ - npm install -g karma-cli 
  - npm install
- - cd ../../
- - npm install
-
-# 执行命令脚本
-script:
- - npm test
