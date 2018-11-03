@@ -5,5 +5,9 @@ language: node_js
 node_js:
   - "8"
 
+dist: trusty
+addons:
+  chrome: stable
 before_script:
+ - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
  - npm install -g karma-cli
