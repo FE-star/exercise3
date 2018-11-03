@@ -3,9 +3,10 @@ language: node_js
 
 # 使用的nodejs版本
 node_js:
-  - "9"
   - "8"
-  
+
+chrome: stable
+
 # 执行install
 install:
  - npm install -g karma-cli 
