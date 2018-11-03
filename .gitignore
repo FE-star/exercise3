@@ -1,1 +1,10 @@
-node_modules
+# dependencies
+/node_modules
+
+# webstorm
+.idea
+
+# production
+/build
+
+npm-debug.log*
