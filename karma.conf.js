@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Sun Nov 04 2018 00:14:04 GMT+0800 (GMT+08:00)
+// Generated on Tue Jan 30 2018 16:12:35 GMT+0800 (中国标准时间)
 
 module.exports = function(config) {
   config.set({
@@ -15,7 +15,9 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'https://cdn.bootcss.com/jquery/2.2.4/jquery.js, node_modules/should/should.js, test/**.js'
+      'https://cdn.bootcss.com/jquery/2.2.4/jquery.js',
+      'node_modules/should/should.js',
+      'test/**.js'
     ],
 
 
@@ -55,13 +57,18 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    //添加判断travis_ci
-    browsers: ['Chrome'],
+    browsers: ['chrome_without_security'],
+    customLaunchers: {
+      chrome_without_security: {
+        base: 'Chrome'
+      }
+    },
+
 
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false,
+    singleRun: process.env.CI,
 
     // Concurrency level
     // how many browser should be started simultaneous
