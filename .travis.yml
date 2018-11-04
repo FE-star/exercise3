@@ -1,7 +1,12 @@
 os: osx
 language: node_js
-node_js:
-  - '7'
-  - '8'
-  - '9'
-  - '11'
+sudo: required
+before_script:
+  - npm install -g karma-cli
+addons:
+  chrome: stable
+  node_js:
+    - '7'
+    - '8'
+    - '9'
+    - '11'
