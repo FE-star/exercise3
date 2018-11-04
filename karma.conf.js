@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Fri Nov 02 2018 11:34:16 GMT+0800 (中国标准时间)
+// Generated on Sun Nov 04 2018 09:44:46 GMT+0800 (中国标准时间)
 
 module.exports = function(config) {
   config.set({
@@ -57,7 +57,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: ['Chrome', 'ChromeCanary'],
 
 
     // Continuous Integration mode
