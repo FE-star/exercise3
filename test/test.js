@@ -11,6 +11,7 @@ describe('jQuery', function () {
     $body[0].should.equal(document.getElementsByTagName('body')[0])
   })
 
+
   describe('should able to trigger an event', function () {
     var ele
     before(function () {
