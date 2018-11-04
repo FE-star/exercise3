@@ -1,7 +1,7 @@
 // Karma configuration
 // Generated on Sat Nov 03 2018 17:35:52 GMT+0800 (China Standard Time)
 
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -16,7 +16,7 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       './lib/jquery-3.3.1.min.js',
-      './test/test.js',
+      './test/**.js',
       'node_modules/should/should.js'
     ],
 

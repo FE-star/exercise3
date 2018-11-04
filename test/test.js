@@ -36,7 +36,6 @@ describe('jQuery', function () {
       url: "https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js",
       cache: false,
       success: function (html, code, aa) {
-        console.log(aa);
         done()
       }
     });
