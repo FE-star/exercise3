@@ -1,7 +1,7 @@
-language: node_js,
+language: node_js
 node_js:
-  - "11",
+  - "11"
 before_script:
-  - npm install -g karma-cli,
+  - npm install -g karma-cli
 scripe:
   - karam start --single-run
