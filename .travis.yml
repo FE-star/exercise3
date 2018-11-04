@@ -1,9 +1,9 @@
-os: windows
+os: osx
 language: node_js
-before_script:
-  - npm install -g karma-cli
-node_js:
-    - "8"
 sudo: required
 addons:
   chrome: stable
+before_script:
+  - npm install -g karma-cli
+node_js:
+  - "11"
