@@ -1,0 +1,24 @@
+language: node_js
+# nodejs版本
+node_js: 
+    - '6'
+
+sudo: required
+addons:
+  chrome: stable
+
+# Travis-CI Caching
+cache:
+  directories:
+    - node_modules
+
+install:
+  - npm install
+ 
+script:
+  - karma start --browsers ChromeHeadless
+ 
+#指定分支，只有指定的分支提交时才会运行脚本
+branches:
+  only:
+    - master
