@@ -16,7 +16,7 @@ install:
   - npm install
  
 script:
-  - karma start --browsers ChromeHeadless
+  - karma start --single-run --browsers ChromeHeadless
  
 #指定分支，只有指定的分支提交时才会运行脚本
 branches:
