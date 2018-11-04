@@ -1,6 +1,6 @@
 # 使用的语言
 language: node_js
-
+sudo: required
 # 使用的nodejs版本
 node_js:
   - "8"
