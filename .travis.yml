@@ -5,5 +5,4 @@ before_install:
   npm install karma-cli -g
 script:
   - export CHROME_BIN=chromium-browser
-  - export DISPLAY=:99.0
   karma start --single-run
