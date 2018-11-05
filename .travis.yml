@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - "9"
+addons:
+  chrome: stable
+before_install:
+  - npm install -g karma-cli
+script:
+  - karma start --single-run
