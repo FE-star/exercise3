@@ -1,8 +1,11 @@
-language: node.js
+language: node_js
 node_js:
  - "8"
 install:
  - 'npm install -g karma-cli'
  - 'npm install'
 script:
- - 'karma start --singleR-run'
+ - 'karma start --single-run'
+sudo: required
+addons:
+  chrome: stable
