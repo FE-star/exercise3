@@ -5,5 +5,4 @@ install:
   - npm install -g karma-cli
   - npm install
 script: 
-  - karma init
   - karma start --single-run
