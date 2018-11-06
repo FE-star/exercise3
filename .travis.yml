@@ -4,3 +4,5 @@ node_js:
   - "7"
 before_install: npm i karma-cli -g
 script: karma start --single-run
+addons:
+  chrome: stable
