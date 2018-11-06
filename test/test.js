@@ -14,7 +14,8 @@ describe('jQuery', function () {
   describe('should able to trigger an event', function () {
     var ele
     before(function () {
-      ele = document.createElement('button')
+      ele = document.createElement('button');
+      ele.innerHTML=111
       document.body.appendChild(ele)
     })
 
