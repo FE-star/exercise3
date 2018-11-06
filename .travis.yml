@@ -9,4 +9,4 @@ script:
 sudo: required
 addons:
   chrome: stable
-os: windows
+os: osx
