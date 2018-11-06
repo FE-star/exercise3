@@ -1,5 +1,5 @@
 # Readme
-
+https://travis-ci.org/Javenchen/exercise3.svg?branch=master
 ### 步骤
 
 * 全局安装 karma

@@ -1,0 +1,11 @@
+os: osx
+language: node_js
+sudo: required
+addons:
+  chrome: stable
+before_script:
+  - npm install -g karma-cli
+script:
+  - karma start --single-run
+node_js:
+  - "10"
