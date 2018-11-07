@@ -3,6 +3,9 @@ language: node_js
 node_js:
   - "8"
 
+addons:
+  firfox: latest  
+
 script:
   karma start
 
