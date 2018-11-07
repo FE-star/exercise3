@@ -9,10 +9,4 @@ before_script:
 script:
   karma start
 
- browsers: ['ChromeHeadlessNoSandbox'],
-    customLaunchers: {
-      ChromeHeadlessNoSandbox: {
-          base: 'ChromeHeadless',
-          flags: ['--no-sandbox']
-      }
-    }
+ browsers: ['chromium-browser']
