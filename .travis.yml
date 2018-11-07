@@ -1,14 +1,8 @@
 language: node_js
-
 node_js:
-  - "8"
-
-addons:
-  firfox: latest  
-
-script:
-  karma start
-
+  - 8.11.4
 before_script:
-  - npm install -g karma-cli
+  npm install karma-cli
+script:
+  karma start --single-run
 
