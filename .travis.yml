@@ -7,5 +7,5 @@ node_js:
 before_script:
   npm install karma-cli
 script:
-  karma start --single-run
+  karma start
 
