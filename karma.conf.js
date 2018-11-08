@@ -17,7 +17,7 @@ module.exports = function(config) {
     files: [
       'https://cdn.bootcss.com/jquery/2.2.4/jquery.js', 
       'node_modules/should/should.js', 
-      'test/test.js'
+      'test/**.js'
     ],
 
 
