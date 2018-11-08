@@ -7,3 +7,4 @@ cache:
 # 指定 node 版本
 node_js:
   - "6"
+sudo: required
