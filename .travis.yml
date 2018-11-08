@@ -6,5 +6,9 @@ cache:
     - node_modules
 # 指定 node 版本
 node_js:
-  - "6"
+  - "11"
+os: osx
+before_install:
+- npm install karma-cli -g
 sudo: required
+addon: chrome
