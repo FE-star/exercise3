@@ -1,2 +1,9 @@
 language: node_js
 script: npm run test
+# 缓存 node_modules 文件夹，不需要每次都下载安装全部 npm 包。
+cache:
+  directories:
+    - node_modules
+# 指定 node 版本
+node_js:
+  - "6"
