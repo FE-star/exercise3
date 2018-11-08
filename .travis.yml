@@ -11,4 +11,5 @@ os: osx
 before_install:
 - npm install karma-cli -g
 sudo: required
-addon: chrome
+addons:
+  chrome: stable
