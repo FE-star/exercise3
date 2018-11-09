@@ -1,8 +1,9 @@
 language: node_js
-sudo: enabled
-addons:
-    chrome: stable
-before_script:
-    - npm install -g karma-cli
 node_js:
-    - "10"
+- "11"
+addons:
+  chrome: stable
+before_script:
+- npm install -g karma-cli
+script:
+- karma start --single-run
