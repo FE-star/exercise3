@@ -30,7 +30,13 @@ describe('jQuery', function () {
     })
   })
 
-  it('should able to request https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js', function (done) {
+  it('should able to request https://raw.githubusercontent.com/FE-star/exercise2/master/test/test.js', function (test) {
     // 使用 jQuery.ajax 请求 https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js，并验证是否拿到文件
+    $.ajax({
+      url: "https://raw.githubusercontent.com/FE-star/exercise2/master/test/test.js",
+      success: ()=> {
+        return test()
+      }
+    });
   })
 })
