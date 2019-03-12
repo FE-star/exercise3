@@ -1,7 +1,9 @@
 language: node_js
 node_js:
   - "8"
-script: mocha
+script: 
+  - karma start karma.conf.js --single-run
+  - mocha
 before_install:
   - npm install
   - export CHROME_BIN=chromium-browser
