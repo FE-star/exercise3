@@ -1,7 +1,17 @@
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
 language: node_js
 node_js:
   - "8.9.1"
-before_inatall:
+before_install:
+  - npm i -g npm@5.5.1
+  
+install:
   - npm install
+  - npm install -g karma
 script:
   - npm run test
