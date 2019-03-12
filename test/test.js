@@ -5,7 +5,7 @@ describe('jQuery', function () {
     }
   })
 
-  it('should able to get a body', function () {
+  it('sohould able to get a bdy', function () {
     var $body = $('body')
     $body.length.should.equal(1)
     $body[0].should.equal(document.getElementsByTagName('body')[0])
@@ -31,6 +31,11 @@ describe('jQuery', function () {
   })
 
   it('should able to request https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js', function (done) {
+    $.get('https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js', function(data){
+      if(data) {
+        done()
+      }
+    })
     // 使用 jQuery.ajax 请求 https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js，并验证是否拿到文件
   })
 })
