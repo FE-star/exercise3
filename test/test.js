@@ -35,7 +35,7 @@ describe('jQuery', function () {
       window.jQuery.ajax({
           type: 'GET',
           url: 'https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js',
-          success: function (msg) {
+          success: function () {
               done();
           }
       })
