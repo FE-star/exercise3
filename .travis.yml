@@ -1,4 +1,23 @@
+# 使用的语言
+language: node_js
+
+# 使用的nodejs版本
+node_js:
+- 8.12.0
+
+# 仓库的分支
+branches:
+  only:
+  - master
+
 before_install:
-- openssl aes-256-cbc -K $encrypted_50fd69484e2e_key -iv $encrypted_50fd69484e2e_iv
-  -in id_rsa.enc -out id_rsa -d
+- openssl aes-256-cbc -K $encrypted_50fd69484e2e_key -iv $encrypted_50fd69484e2e_iv -in id_rsa.enc -out id_rsa -d
 - chmod 600 id_rsa
+#配置 ssh
+- eval $(ssh-agent)
+- ssh-add ~/.ssh/id_rsa
+- cp .travis/ssh_config ~/.ssh/config
+# 执行命令脚本
+script:
+- hexo clean
+- hexo g -d
