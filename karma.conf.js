@@ -56,11 +56,11 @@ module.exports = function (config) {
         browsers: ['Chrome'],
 
         customLaunchers: {
-            ChromeNoSandbox: {
+            Chrome_without_security: {
                 base: 'Chrome',
-                flags: ['--no-sandbox']
+                flags: ['--disable-web-security']
             }
-        },
+        }
 
         // Continuous Integration mode
         // if true, Karma captures browsers, runs the tests and exits
