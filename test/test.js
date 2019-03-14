@@ -17,6 +17,7 @@ describe('jQuery', function () {
     var ele
     before(function () {
       ele = document.createElement('button')
+      ele.innerHTML = 'click me'
       document.body.appendChild(ele)
     })
 
