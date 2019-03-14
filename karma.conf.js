@@ -60,7 +60,7 @@ module.exports = function (config) {
                 base: 'Chrome',
                 flags: ['--disable-web-security']
             }
-        }
+        },
 
         // Continuous Integration mode
         // if true, Karma captures browsers, runs the tests and exits
