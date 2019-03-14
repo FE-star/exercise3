@@ -56,7 +56,7 @@ module.exports = function (config) {
         browsers: ['Chrome'],
 
         customLaunchers: {
-            Chrome_without_security: {
+            Chrome: {
                 base: 'Chrome',
                 flags: ['--disable-web-security']
             }
