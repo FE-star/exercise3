@@ -1,0 +1,9 @@
+language: node_js
+# node版本
+node_js: 
+  - '10'
+
+install:
+  - npm install
+
+
