@@ -45,4 +45,4 @@ describe('jQuery', function () {
   })
 })
 
-console.log('111111111', a)
+console.log('111111111')
