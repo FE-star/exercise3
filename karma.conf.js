@@ -57,17 +57,12 @@ module.exports = function (config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: ['Chrome_travis_ci'],
 
     customLaunchers: {
-      chrome_without_security: {
+      Chrome_travis_ci: {
         base: 'Chrome',
-        flags: ['--disable-web-security']
-      },
-      sauce_chrome_win: {
-        base: 'SauceLabs',
-        browserName: 'chrome',
-        platform: 'windows'
+        flags: ['--no-sandbox']
       }
     },
     // Continuous Integration mode
