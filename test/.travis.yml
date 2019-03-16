@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+    - "8"
+git:
+  submodules: false
+install:
+    - npm install
+test:
+    - npm run test
