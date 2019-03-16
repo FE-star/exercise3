@@ -1,8 +1,12 @@
 language:node_js
-
 node_js:
-- "10.15.1"
+- "10"
+- "8"
 addons:
-  chrome: stable
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
 before_script:
   - npm install -g karma-cli 
