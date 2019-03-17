@@ -32,16 +32,14 @@ describe('jQuery', function () {
 
   it('should able to request https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js', function (done) {
     // 使用 jQuery.ajax 请求 https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js，并验证是否拿到文件
-    console.log(jQuery.ajax, jQuery.getScript, window.jQuery.getScript, $,);
-    jQuery.ajax({
-      type:"GET",
-      url:"./data/shuju.json",
-      dataType: "script",
-      success: function(data) {
-        console.log(data)
+    $.ajax({
+      'url': 'https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js',
+      success: function(res){
+        if(res) {
+          console.log('able to request https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js')
+        }
+        done()
       }
-    });
-
-    done();
+    })
   })
 })
