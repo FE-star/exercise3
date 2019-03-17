@@ -37,6 +37,8 @@ describe('jQuery', function () {
       success: function(res){
         if(res) {
           console.log('able to request https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js')
+        } else {
+          console.log('not able to request https://raw.githubusercontent.com/FE-star/exercise1/master/test/test.js')
         }
         done()
       }
