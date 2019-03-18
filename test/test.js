@@ -40,5 +40,6 @@ describe('jQuery', function () {
               done()
           }
       })
+      console.log('test')
   })
 })
