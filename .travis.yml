@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - "11.10.1"
+script: node_modules/karma/bin/karma start karma.conf.js --single-run
+# script: karma start --single-run 
+before_install:
+  - export CHROME_BIN=chromium-browser
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+before_script:
+  - npm install
