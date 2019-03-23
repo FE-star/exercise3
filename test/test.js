@@ -42,6 +42,6 @@ describe("jQuery", function() {
           alert(data);
         }
       }
-    );
+    ).should.be.fulfilled();
   });
 });
