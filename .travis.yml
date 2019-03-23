@@ -1,0 +1,8 @@
+language: node_js
+node_js: 
+  - "8.9.4"
+before_script:
+  - npm install -g karma-cli
+after_script:
+  - karma init
+  - karma start
