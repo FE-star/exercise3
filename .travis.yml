@@ -1,0 +1,4 @@
+language:node_js,
+os:osx,
+sudo:required,
+script:karma start --single-run
