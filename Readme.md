@@ -7,10 +7,9 @@
 ```
 npm install -g karma-cli
 ```
-
+* Fork 代码仓库拉倒ben
 * Fork 代码仓库并拉到本地
 * 安装所有依赖
-
 ```
 npm install
 ```
